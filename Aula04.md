@@ -1,56 +1,99 @@
+# Disciplina: Projeto de Banco de Dados
 
+## Modelagem ("desenho")
 
+### Níveis de Modelagem
 
+#### Conceitual
+Nível **abstrato**, contendo:
+- Entidades
+- Atributos
+- Relacionamentos
+- Cardinalidades
 
+Objetivos:
+- Interação com o cliente
+- Geração de documentação
 
+#### Lógico
+- Nível de **programação**
+- Foco nas **chaves estrangeiras**
 
-Exercício de revisão:
-    É necesário modelar um esquema de banco de dados para um fluxo ou funcionalidade dentro de um sistema de submissão de projetos em uma instituição.
-    Em uma instituição, há professores/pesquisadores que submetem projetos de extensão. Um projeto possui título, resumo, coordenador (professor/pesquisador),
-    equipe (relação de professores/pesquisadores), área de pesquisa (técnologia, saúde, humanas, social), uma instituição responsável. Uma instituição tem
-    nome, sigla e endereço. Um professor/pesquisador possui nome, email, cpf, número de celular. Todo o projeto submetido precisa passar por uma avaliação.
-    A avaliação é composta por uma submissão de projeto, um avaliador responsável (professor/pesquisador), um avaliador suplente (professor/pesquisador),
-    um campo para parecer, data limite de parecer, resultado (aprovado, reprovado, em correção)
+#### Físico
+- Nível de **SGBD e tecnologia**
 
-    1º passo: identificar entidades
-    2º passo: identificar atributos
-    3º passo: identificar relacionamentos
-    4º passo: identificar cardinalidades
+---
 
+# Conceitos
 
-    Entidades:
-        - Professor (ligado com Projeto, Avaliacao)
-            - Nome
-            - Email
-            - CPF (id)
-            - Celular
-        - Projeto (ligado com Avaliacao, Professor, Area, Instituicao)
-            - Título
-            - Resumo
-            - Equipe (Rótulo com Professor) 1...n / 1...n
-            - Coordenador (Rótulo com Professor) 1...n / 1...n
-            - idProjeto
-        - Avaliacao (núcleo do nosso banco de dados) (ligado com Professor, Projeto, Resultado)
-            - idAvaliacao
-            - Responsavel (Rótulo com Professor)
-            - Suplente (Rótulo com Professor)
-            - Parecer
-            - data
-        - Instituicao (ligado com Projeto)
-            - Nome
-            - Sigla
-            - Endereco
-            - idInstituicao
-        - Area (ligado com Projeto)
-            - Descricao
-            - idArea
-        - Resultado (ligado com Avaliacao)
-            - idResultado
-            - Descricao
-        
+## Banco de Dados vs SGBD
 
+- **Banco de Dados (BD)** → Estrutura de armazenamento de dados  
+- **SGBD** → Conjunto de serviços para gerenciar o banco de dados
 
+### Serviços do SGBD
+- Garantir **integridade** do banco
+- Garantir **transações**
+- Garantir **backup**
 
-Relacionamento indica que UM ou MAIS ATRIBUTOS de uma entidade VISITA outra
-O lado que está com o N da cardinalidade, ele puxa a chave estrangeira. 
-Deve ser atributo identificador na entidade de origem
+---
+
+# Sistema Computacional
+
+## Sistema de Informação
+- Foco em **relatórios**
+
+## Sistema de Conhecimento
+- Foco em **reconhecimento de padrões**
+- Armazenar **mais atributos**
+- Evitar **dados nulos**
+
+---
+
+# Partes ou Elementos de um Sistema
+
+## Aspectos Estruturais
+- **Banco de Dados**
+
+## Aspectos Funcionais
+- **Funcionalidades ou finalidades do sistema**
+
+---
+
+# Estudo de Cardinalidades
+
+### 1 para N
+- A **chave estrangeira** vai para a **tabela/entidade do lado N**
+
+### N para N
+- Cria-se uma **terceira tabela**
+- As **chaves estrangeiras vão para essa nova tabela**
+
+### 1 para 1
+- A **chave estrangeira pode ir para qualquer uma das tabelas**
+
+---
+
+# Avaliação – Projeto de Banco de Dados
+
+📅 **Data de entrega:** 23/03/2026  
+⏰ **Horário:** 11h15min  
+
+---
+
+# Forma de Entrega
+
+1. Realizar a **modelagem do sistema**
+   - Criar o **Diagrama Entidade-Relacionamento (nível conceitual)**
+
+2. Para cada diagrama criado:
+   - Salvar em **imagem (.png ou .jpg)**
+
+3. No **repositório pessoal da disciplina no GitHub**:
+   - Criar uma **pasta da avaliação**
+   - Disponibilizar as **imagens dos diagramas**
+
+4. Enviar **email para:**  
+   `alexz@ufn.edu.br`
+
+   **Assunto:**  
