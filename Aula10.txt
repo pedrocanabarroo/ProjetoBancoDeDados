@@ -1,0 +1,5 @@
+select Aluno.nome from Disciplina, Turma Where id_disciplina == 'Estrutura de dados' and Disciplina.id_disciplina == Turma.id_disciplina and Turma.id_turma == Matricula.id_matricula and Matricula.id_aluno == Alunoo.id_aluno and Turma.ano_semestre like '2026%';
+
+
+
+select Matricula.id_aluno from Matricula Where id_aluno == '5' and Matricula.id_turma == Turma.id_turma
